@@ -2,14 +2,6 @@ import AppError from '@config/AppErrors';
 import { Laboratory } from '@entities/Laboratory';
 
 import { LabRepository } from 'src/database';
-// IMPORTEI DO ARQUIVO INDEX DO DATABASE, eu exportei os Repository de la 
-
-//A FORMA COMO ESTAVA ANTES ERA MUITO ANTIGA E NAO FUNCIONAVA MAIS
-
-// export const UserRepository = connectDB.getRepository(User)
-// export const LabRepository = connectDB.getRepository(Laboratory)
-// export const UserTypeRepository = connectDB.getRepository(UserType)
-
 
 interface IRequest {
   name: string;
@@ -23,8 +15,9 @@ class CreateLaboratoryService {
     capacity,
     equipments_qtd,
   }: IRequest): Promise<Laboratory> {
+    const nameExists = await LabRepository.findOne({ where: { name } });
 
-    const nameExists = await LabRepository.findOne({where:{name,}});
+    console.log('aq');
 
     if (nameExists) {
       throw new AppError('Name address already used!');

@@ -2,7 +2,8 @@ import { DataSource } from 'typeorm';
 import dotenv from 'dotenv';
 import { Laboratory } from '@entities/Laboratory';
 import { User } from '@entities/User';
-import UserType from '@entities/UserType';
+import { UserType } from '@entities/UserType';
+import { Booking } from '@entities/Booking';
 
 dotenv.config();
 
@@ -36,5 +37,6 @@ export const Manager = connectDB.manager;
 export const UserRepository = connectDB.getRepository(User);
 export const LabRepository = connectDB.getRepository(Laboratory);
 export const UserTypeRepository = connectDB.getRepository(UserType);
+export const BookingRepository = connectDB.getRepository(Booking);
 
 export default connectDB;

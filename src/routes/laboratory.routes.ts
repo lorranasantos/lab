@@ -10,7 +10,7 @@ laboratoryRouter.get('/', laboratoryController.index);
 
 laboratoryRouter.post(
   '/',
-  isAuthenticated,
+  //isAuthenticated,
   celebrate({
     [Segments.BODY]: {
       name: Joi.string().required(),

@@ -1,18 +1,6 @@
 import { User } from '@entities/User';
-import UserType from '@entities/UserType';
 import AppError from '@config/AppErrors';
-
-
 import { UserRepository } from 'src/database';
-// IMPORTEI DO ARQUIVO INDEX DO DATABASE, eu exportei os Repository de la 
-
-//A FORMA COMO ESTAVA ANTES ERA MUITO ANTIGA E NAO FUNCIONAVA MAIS
-
-// export const UserRepository = connectDB.getRepository(User)
-// export const LabRepository = connectDB.getRepository(Laboratory)
-// export const UserTypeRepository = connectDB.getRepository(UserType)
-
-
 
 interface IRequest {
   id: string;
@@ -36,8 +24,7 @@ class UpdateUserService {
     isActive,
     idUserType,
   }: IRequest): Promise<User> {
-
-    const user = await UserRepository.findOne({where:{id}});
+    const user = await UserRepository.findOne({ where: { id } });
 
     if (!user) {
       throw new AppError('User not found');

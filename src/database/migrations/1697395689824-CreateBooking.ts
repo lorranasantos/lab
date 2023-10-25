@@ -27,7 +27,7 @@ export class CreateBooking1697395689824 implements MigrationInterface {
           },
           {
             name: 'duration',
-            type: 'varchar',
+            type: 'int',
             isUnique: true,
           },
           {

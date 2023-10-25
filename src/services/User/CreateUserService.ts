@@ -31,6 +31,12 @@ class CreateUserService {
     if (emailExists) {
       throw new AppError('Email address already used!');
     }
+    if (cpfExists) {
+      throw new AppError('CPF already registered!');
+    }
+    if (phoneExists) {
+      throw new AppError('Phone number already registered!');
+    }
 
     const hashedPassword = await hash(password, 8);
 

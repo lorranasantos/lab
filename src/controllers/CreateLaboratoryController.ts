@@ -16,7 +16,7 @@ export default class LaboratoryController {
   public async create(request: Request, response: Response): Promise<Response> {
     const { name, capacity, equipments_qtd } = request.body;
 
-    console.log(request.user.id);
+    //console.log(request.user.id);
 
     const createLaboratory = new CreateLaboratoryService();
 
