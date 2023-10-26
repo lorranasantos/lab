@@ -13,8 +13,7 @@ export default class BookingController {
   public async create(request: Request, response: Response): Promise<Response> {
     const { idUserRequest, idLaboratory, date, duration } = request.body;
 
-    console.log(request.user.id);
-
+    console.log('controller');
     const createBooking = new CreateBookingService();
 
     const booking = await createBooking.execute({

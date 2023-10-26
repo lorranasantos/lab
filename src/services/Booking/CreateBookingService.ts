@@ -17,13 +17,10 @@ class CreateBookingService {
     date,
     duration,
   }: IRequest): Promise<Booking> {
-    console.log('aq');
-    let barCode = Math.floor(Math.random() * 8);
-    console.log(barCode);
-
-    if (!barCode) {
+    console.log('service');
+    /*if (!barCode) {
       throw new AppError('You need to pay your slip!');
-    }
+    }*/
 
     const dateExists = await BookingRepository.findOne({
       where: { date },

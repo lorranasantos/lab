@@ -18,9 +18,6 @@ export class Booking {
   idLaboratory: string;
 
   @Column()
-  capacity: 'int';
-
-  @Column()
   date: Date;
 
   @Column()

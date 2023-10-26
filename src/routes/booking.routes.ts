@@ -10,7 +10,6 @@ const bookingController = new CreateBookingController();
 
 bookingRouter.post(
   '/',
-  isAuthenticated,
   celebrate({
     [Segments.BODY]: {
       idUserRequest: Joi.string().required(),
