@@ -6,7 +6,7 @@ import isAuthenticated from 'src/middlewares/isAuthenticated';
 const bookingRouter = Router();
 const bookingController = new CreateBookingController();
 
-//bookingRouter.get('/', bookingController.index);
+bookingRouter.get('/', bookingController.index);
 
 bookingRouter.post(
   '/',
@@ -21,14 +21,13 @@ bookingRouter.post(
   bookingController.create,
 );
 
-/*bookingRouter.put(
+bookingRouter.put(
   '/:id',
   celebrate({
     [Segments.PARAMS]: {
       id: Joi.string().uuid().required(),
     },
     [Segments.BODY]: {
-      idUserRequest: Joi.string(),
       idLaboratory: Joi.string(),
       date: Joi.date(),
       duration: Joi.number(),
@@ -45,6 +44,6 @@ bookingRouter.delete(
     },
   }),
   bookingController.delete,
-);*/
+);
 
 export default bookingRouter;
