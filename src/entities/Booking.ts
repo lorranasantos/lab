@@ -12,10 +12,10 @@ export class Booking {
   id: string;
 
   @Column()
-  idUserRequest: string;
+  idUserRequest: 'int';
 
   @Column()
-  idLaboratory: string;
+  idLaboratory: 'int';
 
   @Column()
   date: Date;

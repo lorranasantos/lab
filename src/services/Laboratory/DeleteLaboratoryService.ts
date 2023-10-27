@@ -3,7 +3,7 @@ import AppError from '@config/AppErrors';
 import { LabRepository } from 'src/database';
 
 interface IRequest {
-  id: string;
+  id: 'int';
 }
 
 class DeleteLaboratoryService {

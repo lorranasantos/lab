@@ -11,8 +11,8 @@ import UserType from './UserType';
 
 @Entity('users')
 export class User {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
+  @PrimaryGeneratedColumn('increment')
+  id: 'int';
 
   @Column()
   name: string;

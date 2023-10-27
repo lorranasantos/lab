@@ -15,8 +15,6 @@ app.use(express.json());
 app.use(routes);
 app.use(errors());
 
-
-
 app.listen(3000, () => console.log('Server is running'));
 
 module.exports = app;

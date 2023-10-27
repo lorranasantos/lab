@@ -5,7 +5,7 @@ import { BookingRepository } from 'src/database';
 import { Booking } from '@entities/Booking';
 interface IRequest {
   id: string;
-  idLaboratory: string;
+  idLaboratory: 'int';
   date: Date;
   duration: 'int';
 }

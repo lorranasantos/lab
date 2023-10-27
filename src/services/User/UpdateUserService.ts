@@ -3,7 +3,7 @@ import AppError from '@config/AppErrors';
 import { UserRepository } from 'src/database';
 
 interface IRequest {
-  id: string;
+  id: 'int';
   name: string;
   email: string;
   cpf: string;

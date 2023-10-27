@@ -9,7 +9,7 @@ dotenv.config();
 
 const connectDB = new DataSource({
   name: 'postgres',
-  url: 'postgres://postgres:bcd127@localhost:5432/laboratory?sslmode=disable',
+  url: 'postgres://postgres:bcd127@localhost:5432/lab?sslmode=disable',
   type: 'postgres',
   logging: false,
   synchronize: true,

@@ -8,8 +8,8 @@ import {
 
 @Entity('laboratories')
 export class Laboratory {
-  @PrimaryGeneratedColumn('uuid')
-  id: string;
+  @PrimaryGeneratedColumn('increment')
+  id: 'int';
 
   @Column()
   name: string;

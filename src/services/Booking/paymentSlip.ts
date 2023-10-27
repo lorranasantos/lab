@@ -18,4 +18,13 @@ export class CreatePaymentSlipService {
 
     console.log(barCode);
   }
+
+  /*{
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          "Cookie": 'gowash_session=cPuSsISPvyG7ROXAreKsGac8jXiqCb7iAGI7LOE',
+        },
+        body:
+      },*/
 }

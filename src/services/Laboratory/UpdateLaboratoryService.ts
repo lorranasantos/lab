@@ -4,7 +4,7 @@ import { Laboratory } from '@entities/Laboratory';
 
 import { LabRepository } from 'src/database';
 interface IRequest {
-  id: string;
+  id: 'int';
   name: string;
   capacity: 'int';
   equipments_qtd: 'int';
